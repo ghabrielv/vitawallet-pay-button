@@ -1,0 +1,26 @@
+{
+  "name": "vitawallet-pay-button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghabrielv/vitawallet-pay-button.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghabrielv/vitawallet-pay-button/issues"
+  },
+  "engines": {
+    "node": ">10.0"
+  },
+  "homepage": "https://github.com/ghabrielv/vitawallet-pay-button#readme",
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "6.2.1"
+  }
+}
