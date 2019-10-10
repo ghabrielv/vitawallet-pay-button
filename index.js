@@ -6,6 +6,7 @@ exports.payButton = function(btc_address, env = undefined, port = 3000) {
 		case 'prod':
 			env = 'prod';
 			break;
+		case 'qa':
 		case 'dev':
 			env = 'qa';
 			break;
