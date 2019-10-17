@@ -16,7 +16,6 @@ In a browser:
 
 Using npm:
 ```shell
-$ npm i -g npm
 $ npm install --save vitawallet-pay-button
 ```
 
@@ -32,8 +31,8 @@ import { payButton } from "vitawallet-pay-button";
 
 ## How to use?
 
-Example:
-```
+Example in ReactJS:
+```js
 <Button
 className="btn-green"
 onClick={() => payButton(btc_address, 100, 'usd', 'Pago de zapatos', ENV)}>
