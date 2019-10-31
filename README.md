@@ -35,7 +35,7 @@ Example in ReactJS:
 ```js
 <Button
 className="btn-green"
-onClick={() => payButton(btc_address, 100, 'usd', 'Pago de zapatos', ENV)}>
+onClick={() => payButton(email, 100, 'usd', 'Pago de zapatos', true, ENV)}>
     Pagar con VitaWallet
 </Button>
 ```
@@ -44,8 +44,9 @@ onClick={() => payButton(btc_address, 100, 'usd', 'Pago de zapatos', ENV)}>
 
 These are the arguments available on the payment button.
 
- * btc_address -> Your BTC address in VitaWallet. Ex: '3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC'
+ * email -> Your email address in VitaWallet. Ex: 'soporte@vitawallet.io'
  * amount -> Payment amount. Ex: 100. (optional)
  * money -> Transaction Currency. Options 'btc', 'usd', 'clp'. (optional)
  * description -> Transaction Description. Ex: 'Pago de zapatos'. (optional)
+ * force -> No change currency. Ex: false. (optional) (default: true)
  * env -> Enviroment 'qa' or 'prod'. (optional)

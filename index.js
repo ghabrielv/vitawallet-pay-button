@@ -1,5 +1,5 @@
 var newWindow;
-exports.payButton = function(btc_address, amount = undefined, money = undefined, description = undefined, env = undefined, port = 3000) {
+exports.payButton = function(email, amount = undefined, money = undefined, description = undefined, force = true, env = undefined, port = 3000) {
 	var url = '';
 	switch (env) {
 		case undefined:
@@ -16,7 +16,7 @@ exports.payButton = function(btc_address, amount = undefined, money = undefined,
 		default:
 			env = 'prod';
 	}
-	var params = btc_address + (amount ? '?amount=' + amount : '') + (money ? '&money=' + money : '') + (description ? '&description=' + description : '');
+	var params = email + (amount ? '?amount=' + amount : '') + (money ? '&money=' + money : '') + (description ? '&description=' + description : '') + (force ? '&force=' + force : '');
 	var url = (env == 'prod' || env == 'qa') ? 'https://' + (env == 'prod' ? 'app.vitawallet.io' : 'qa-ui-dot-vita-wallet-api-qa-2.appspot.com') + '/pay-button/' + params : 'http://localhost:' + port + '/pay-button/' + params;
 	newWindow = window.open(url,'Botón de pago','width=auto,height=auto,toolbar=0,menubar=0');  
 	if (window.focus) {
