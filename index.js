@@ -18,7 +18,7 @@ exports.payButton = function(email, amount = undefined, money = undefined, descr
 	}
 	var params = email + (amount ? '?amount=' + amount : '') + (money ? '&money=' + money : '') + (description ? '&description=' + description : '') + (force ? '' : '&force=false');
 	var url = (env == 'prod' || env == 'qa') ? 'https://' + (env == 'prod' ? 'app.vitawallet.io' : 'qa-ui-dot-vita-wallet-api-qa-2.appspot.com') + '/pay-button/' + params : 'http://localhost:' + port + '/pay-button/' + params;
-	newWindow = window.open(url,'Botón de pago','width=auto,height=auto,toolbar=0,menubar=0');  
+	newWindow = window.open(url,'Botón de pago','width=768,height=1024,toolbar=0,menubar=0');  
 	if (window.focus) {
 		newWindow.focus();
 	}
